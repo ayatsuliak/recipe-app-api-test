@@ -16,6 +16,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3  # This is the action that we are using to check out the code
       - name: Test
-        run: docker-compose run --rm app sh -c "python manage.py wait_for_db && python manage.py test"  # This is the command that we are running to test the code
+        run: docker compose run --rm app sh -c "python manage.py wait_for_db && python manage.py test"  # This is the command that we are running to test the code
       - name: Lint
         run: docker compose run --rm app sh -c "flake8"  # This is the command that we are running to lint the code
