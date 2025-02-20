@@ -88,7 +88,7 @@ class PublicUserApiTests(TestCase):
         """Test that token is not created if invalid credentials are given."""
         create_user(email='test@example.com', password='test123')
 
-        payload = {'email':'test@example.com', 'password': 'badpass'}
+        payload = {'email': 'test@example.com', 'password': 'badpass'}
         res = self.client.post(TOKEN_URL, payload)
 
         self.assertNotIn('token', res.data)

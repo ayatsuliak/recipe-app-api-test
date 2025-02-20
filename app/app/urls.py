@@ -15,7 +15,6 @@ Including another URLconf
 """
 from drf_spectacular.views import (
     SpectacularAPIView,
-    SpectacularRedocView,
     SpectacularSwaggerView
 )
 from django.contrib import admin
